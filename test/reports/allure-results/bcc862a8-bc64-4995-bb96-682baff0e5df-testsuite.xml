@@ -1,0 +1,102 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1562325873165' stop='1562325920532'>
+    <name>mmm-graphicswizard-gl-web-qa login popup</name>
+    <title>mmm-graphicswizard-gl-web-qa login popup</title>
+    <test-cases>
+        <test-case start='1562325894450' status='passed' stop='1562325896092'>
+            <name>should not allow to login without email</name>
+            <title>should not allow to login without email</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1562325896092' status='passed' stop='1562325897638'>
+            <name>should not allow to login without password</name>
+            <title>should not allow to login without password</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1562325897638' status='passed' stop='1562325899198'>
+            <name>should not allow to login with invalid credentials</name>
+            <title>should not allow to login with invalid credentials</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1562325899198' status='passed' stop='1562325900799'>
+            <name>should not allow to reset email which is not exist</name>
+            <title>should not allow to reset email which is not exist</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1562325900799' status='failed' stop='1562325900954'>
+            <name>should not allow to pass incorrect email format</name>
+            <title>should not allow to pass incorrect email format</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>expected '' to equal 'Invalid email format.'</message>
+                <stack-trace>AssertionError: expected '' to equal 'Invalid email format.'
+                    at Context.it (/Users/sohardco/devLearn/wdio/test/specs/user-login.spec.js:58:48)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1562325900954' status='broken' stop='1562325920531'>
+            <name>should allow user to login with valid credentials </name>
+            <title>should allow user to login with valid credentials </title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>waitUntil condition timed out after 10000ms</message>
+                <stack-trace>Error: waitUntil condition timed out after 10000ms
+                    at LoginPage.isLoggedIn (/Users/sohardco/devLearn/wdio/test/pageobjects/login.page.js:75:17)
+                    at Context.it (/Users/sohardco/devLearn/wdio/test/specs/user-login.spec.js:67:17)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

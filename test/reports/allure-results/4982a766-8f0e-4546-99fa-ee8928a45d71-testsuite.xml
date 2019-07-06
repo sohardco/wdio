@@ -1,0 +1,32 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1561125806237' stop='1561125815326'>
+    <name>mmm-graphicswizard-gl-web-qa login popup</name>
+    <title>mmm-graphicswizard-gl-web-qa login popup</title>
+    <test-cases>
+        <test-case start='1561125806237' status='broken' stop='1561125815325'>
+            <name>should allow user to login </name>
+            <title>should allow user to login </title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>(intermediate value).takeToDashbrdBtn is not a function</message>
+                <stack-trace>TypeError: (intermediate value).takeToDashbrdBtn is not a function
+                    at LoginPage.takeToDashbrdBtn (D:\wdio\test\pageobjects/login.page.js:16:43)
+                    at LoginPage.takeToDashbrdBtn [as goToDashbrd] (D:\wdio\test\pageobjects/login.page.js:37:15)
+                    at LoginPage.goToDashbrd [as login] (D:\wdio\test\pageobjects/login.page.js:46:12)
+                    at Context.login (D:\wdio\test\specs/user-login.spec.js:15:15)
+                    at Promise (D:\wdio\node_modules\@wdio\sync\build\index.js:57:22)
+                    at Context.executeSync (D:\wdio\node_modules\@wdio\sync\build\index.js:55:10)
+                    at D:\wdio\node_modules\@wdio\sync\build\index.js:201:70</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

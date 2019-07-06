@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="mmm_graphicswizard_gl_web_qa_login_popup" timestamp="2019-07-05T16:50:40" time="20.724" tests="6" failures="0" errors="0" skipped="0">
+    <properties>
+      <property name="specId" value="0"/>
+      <property name="suiteName" value="mmm-graphicswizard-gl-web-qa login popup"/>
+      <property name="capabilities" value="chrome.75_0_3770_100.macosx"/>
+      <property name="file" value="./test/specs/user-login.spec.js"/>
+    </properties>
+    <testcase classname="chrome.75_0_3770_100.macosx.mmm_graphicswizard_gl_web_qa_login_popup" name="should_not_allow_to_login_without_email" time="1.656"/>
+    <testcase classname="chrome.75_0_3770_100.macosx.mmm_graphicswizard_gl_web_qa_login_popup" name="should_not_allow_to_login_without_password" time="1.563"/>
+    <testcase classname="chrome.75_0_3770_100.macosx.mmm_graphicswizard_gl_web_qa_login_popup" name="should_not_allow_to_login_with_invalid_credentials" time="1.556"/>
+    <testcase classname="chrome.75_0_3770_100.macosx.mmm_graphicswizard_gl_web_qa_login_popup" name="should_not_allow_to_reset_email_which_is_not_exist" time="1.522"/>
+    <testcase classname="chrome.75_0_3770_100.macosx.mmm_graphicswizard_gl_web_qa_login_popup" name="should_not_allow_to_pass_incorrect_email_format" time="1.519"/>
+    <testcase classname="chrome.75_0_3770_100.macosx.mmm_graphicswizard_gl_web_qa_login_popup" name="should_allow_user_to_login_with_valid_credentials" time="2.412"/>
+  </testsuite>
+</testsuites>

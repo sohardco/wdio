@@ -1,0 +1,68 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1562076631187' stop='1562076651618'>
+    <name>mmm-graphicswizard-gl-web-qa login popup</name>
+    <title>mmm-graphicswizard-gl-web-qa login popup</title>
+    <test-cases>
+        <test-case start='1562076639304' status='passed' stop='1562076640367'>
+            <name>should not allow to login with invalid credentials</name>
+            <title>should not allow to login with invalid credentials</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1562076640367' status='failed' stop='1562076641284'>
+            <name>should not allow to login without email</name>
+            <title>should not allow to login without email</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>expected 'Error\nUsername or Password is incorrect. Please check your sign-in credentials.' to equal 'Error\nThe EmailAddress field is required.'</message>
+                <stack-trace>AssertionError: expected 'Error\nUsername or Password is incorrect. Please check your sign-in credentials.' to equal 'Error\nThe EmailAddress field is required.'
+                    at Context.it (D:/wdio/test/specs/user-login.spec.js:39:28)
+                    at Promise (D:\wdio\node_modules\@wdio\sync\build\index.js:57:22)
+                    at Context.executeSync (D:\wdio\node_modules\@wdio\sync\build\index.js:55:10)
+                    at D:\wdio\node_modules\@wdio\sync\build\index.js:201:70</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1562076641284' status='broken' stop='1562076651616'>
+            <name>should allow user to login with valid credentials </name>
+            <title>should allow user to login with valid credentials </title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>waitUntil condition failed with the following reason: Cannot read property 'isExisting' of undefined</message>
+                <stack-trace>Error: waitUntil condition failed with the following reason: Cannot read property 'isExisting' of undefined
+                    at timer.catch.e (D:\wdio\node_modules\webdriverio\build\commands\browser\waitUntil.js:76:11)
+                    at Browser.runCommand (D:\wdio\node_modules\@wdio\sync\build\wrapCommand.js:31:24)
+                    at Browser.&lt;anonymous> (D:\wdio\node_modules\@wdio\sync\build\wrapCommand.js:53:31)
+                    at Context.&lt;anonymous> (D:/wdio/test/specs/user-login.spec.js:44:13)
+                    at Promise (D:\wdio\node_modules\@wdio\sync\build\index.js:57:22)
+                    at Context.executeSync (D:\wdio\node_modules\@wdio\sync\build\index.js:55:10)
+                    at D:\wdio\node_modules\@wdio\sync\build\index.js:201:70</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

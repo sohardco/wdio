@@ -1,0 +1,102 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1562325456667' stop='1562325484634'>
+    <name>mmm-graphicswizard-gl-web-qa login popup</name>
+    <title>mmm-graphicswizard-gl-web-qa login popup</title>
+    <test-cases>
+        <test-case start='1562325467891' status='passed' stop='1562325469561'>
+            <name>should not allow to login without email</name>
+            <title>should not allow to login without email</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1562325469561' status='passed' stop='1562325471115'>
+            <name>should not allow to login without password</name>
+            <title>should not allow to login without password</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1562325471116' status='passed' stop='1562325472654'>
+            <name>should not allow to login with invalid credentials</name>
+            <title>should not allow to login with invalid credentials</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1562325472654' status='passed' stop='1562325474208'>
+            <name>should not allow to reset email which is not exist</name>
+            <title>should not allow to reset email which is not exist</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1562325474208' status='failed' stop='1562325474394'>
+            <name>should not allow to pass incorrect email format</name>
+            <title>should not allow to pass incorrect email format</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>expected '' to equal 'Invalid email format.'</message>
+                <stack-trace>AssertionError: expected '' to equal 'Invalid email format.'
+                    at Context.it (/Users/sohardco/devLearn/wdio/test/specs/user-login.spec.js:58:48)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1562325474394' status='broken' stop='1562325484632'>
+            <name>should allow user to login with valid credentials </name>
+            <title>should allow user to login with valid credentials </title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Can't call setValue on element with selector "#login-password" because element wasn't found</message>
+                <stack-trace>Error: Can't call setValue on element with selector "#login-password" because element wasn't found
+                    at LoginPage.login (/Users/sohardco/devLearn/wdio/test/pageobjects/login.page.js:59:26)
+                    at Context.it (/Users/sohardco/devLearn/wdio/test/specs/user-login.spec.js:66:17)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

@@ -1,0 +1,38 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1560332208547' stop='1560332216298'>
+    <name>mmm-graphicswizard-gl-web-qa login popup</name>
+    <title>mmm-graphicswizard-gl-web-qa login popup</title>
+    <test-cases>
+        <test-case start='1560332208548' status='broken' stop='1560332216297'>
+            <name>should allow user to login </name>
+            <title>should allow user to login </title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>element ("[class="landing-login-btn"]") still not displayed after 5000ms</message>
+                <stack-trace>Error: element ("[class="landing-login-btn"]") still not displayed after 5000ms
+                    at timer.catch.e (D:\wdio\node_modules\webdriverio\build\commands\browser\waitUntil.js:70:15)
+                    at Element.runCommand (D:\wdio\node_modules\@wdio\sync\build\wrapCommand.js:31:24)
+                    at Element.&lt;anonymous> (D:\wdio\node_modules\@wdio\sync\build\wrapCommand.js:53:31)
+                    at Element.fn (D:\wdio\node_modules\webdriverio\build\middlewares.js:27:57)
+                    at Element.&lt;anonymous> (D:\wdio\node_modules\webdriverio\build\middlewares.js:50:8)
+                    at Element.waitForDisplayed (D:\wdio\node_modules\webdriverio\build\commands\element\waitForDisplayed.js:52:15)
+                    at Element.runCommand (D:\wdio\node_modules\@wdio\sync\build\wrapCommand.js:37:32)
+                    at LoginPage.waitForDisplayed [as waitForloginPageToLoad] (D:\wdio\test\pageobjects/ta-login.page.js:30:30)
+                    at LoginPage.waitForloginPageToLoad [as login] (D:\wdio\test\pageobjects/ta-login.page.js:35:12)
+                    at Context.login (D:\wdio\test\specs/ta-user-login.spec.js:15:15)
+                    at Promise (D:\wdio\node_modules\@wdio\sync\build\index.js:57:22)
+                    at Context.executeSync (D:\wdio\node_modules\@wdio\sync\build\index.js:55:10)
+                    at D:\wdio\node_modules\@wdio\sync\build\index.js:201:70</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

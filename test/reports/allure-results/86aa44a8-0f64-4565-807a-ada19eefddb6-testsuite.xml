@@ -1,0 +1,35 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1561125874782' stop='1561125914599'>
+    <name>mmm-graphicswizard-gl-web-qa login popup</name>
+    <title>mmm-graphicswizard-gl-web-qa login popup</title>
+    <test-cases>
+        <test-case start='1561125874784' status='broken' stop='1561125914595'>
+            <name>should allow user to login </name>
+            <title>should allow user to login </title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Can't call click on element with selector "[class="shevrone"]" because element wasn't found</message>
+                <stack-trace>Error: Can't call click on element with selector "[class="shevrone"]" because element wasn't found
+                    at implicitWait (D:\wdio\node_modules\webdriverio\build\utils\implicitWait.js:34:13)
+                    at Element.runCommand (D:\wdio\node_modules\@wdio\sync\build\wrapCommand.js:31:24)
+                    at Element.&lt;anonymous> (D:\wdio\node_modules\@wdio\sync\build\wrapCommand.js:53:31)
+                    at Element.&lt;anonymous> (D:\wdio\node_modules\webdriverio\build\middlewares.js:50:8)
+                    at LoginPage.click (D:\wdio\test\pageobjects/page.js:24:19)
+                    at LoginPage.logout (D:\wdio\test\pageobjects/login.page.js:54:13)
+                    at LoginPage.logout [as login] (D:\wdio\test\pageobjects/login.page.js:47:12)
+                    at Context.login (D:\wdio\test\specs/user-login.spec.js:15:15)
+                    at Promise (D:\wdio\node_modules\@wdio\sync\build\index.js:57:22)
+                    at Context.executeSync (D:\wdio\node_modules\@wdio\sync\build\index.js:55:10)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
