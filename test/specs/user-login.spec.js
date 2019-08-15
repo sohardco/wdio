@@ -46,10 +46,11 @@ describe('mmm-graphicswizard-gl-web-qa login popup', function() {
       LoginPage.usernameInput.setValue('foo@bar.com');
       LoginPage.sendEmailBtn.click();
       LoginPage.checkErrorMsg('Error\nEmail address is incorrect');
-
+      LoginPage.returnToLogin.click();
   })
 
   it('should not allow to pass incorrect email format', () => {
+      LoginPage.resetPassword.click();
       const formValidation = LoginPage.formError
       LoginPage.usernameInput.setValue('foo@')
       formValidation.waitForDisplayed()
