@@ -9,7 +9,7 @@ class LoginPage extends Page {
     * define elements
     */
     //Popup selectors
-    get landingLoginBtn() { return $('.landing-login-btn');}
+    get landingLoginBtn() { return $('.landing-login-btn'); }
     get usernameInput()   { return $('#login-email'); }
     get passwordInput()   { return $('#login-password'); }
     get resetPassword ()  { return $('.password-reset.text-yellow'); }
@@ -28,15 +28,15 @@ class LoginPage extends Page {
     /**
      * define or overwrite page methods
      */
-    open () {
-        super.open('')       //this will append `login` to the baseUrl to form complete URL
+    open(page) {
+        super.open(page)       //this will append `login` to the baseUrl to form complete URL
         //browser.pause(3000);
     }
     /**
      * your page specific methods
      */
 
-    waitForloginPageToLoad () {
+    waitForloginPageToLoad() {
       if(!this.landingLoginBtn.isDisplayed()){
         this.landingLoginBtn.waitForDisplayed(9000);
 

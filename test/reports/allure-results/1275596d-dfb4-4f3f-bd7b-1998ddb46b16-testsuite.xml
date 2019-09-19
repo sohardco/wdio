@@ -1,0 +1,33 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1562582113917' stop='1562582113934'>
+    <name>mmm-graphicswizard-gl-web-qa login popup</name>
+    <title>mmm-graphicswizard-gl-web-qa login popup</title>
+    <test-cases>
+        <test-case start='1562582113917' status='broken' stop='1562582113930'>
+            <name>"before all" hook: Access login page</name>
+            <title>"before all" hook: Access login page</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>this.landingLoginBtn.isDisplayed is not a function</message>
+                <stack-trace>TypeError: this.landingLoginBtn.isDisplayed is not a function
+                    at LoginPage.waitForloginPageToLoad (D:/wdio/test/pageobjects/login.page.js:40:32)
+                    at Context.before (D:/wdio/test/specs/user-login.spec.js:22:17)
+                    at callFn (D:\wdio\node_modules\mocha\lib\runnable.js:387:21)
+                    at Hook.Runnable.run (D:\wdio\node_modules\mocha\lib\runnable.js:379:7)
+                    at next (D:\wdio\node_modules\mocha\lib\runner.js:384:10)
+                    at Immediate._onImmediate (D:\wdio\node_modules\mocha\lib\runner.js:425:5)
+                    at processImmediate (timers.js:632:19)
+                    at process.topLevelDomainCallback (domain.js:120:23)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

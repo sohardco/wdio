@@ -1,16 +1,24 @@
+let config = './test/config/suite.mocha.conf.js'
+
 module.exports = function(grunt) {
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         webdriver: {
             test: {
-                configFile: './test/config/suite.mocha.conf.js'
+                configFile: config
             },
             test_login: {
               options: {
                 suite: ['login']
               },
-              configFile: './test/config/suite.mocha.conf.js'
+              configFile: config
+            },
+            test_registration: {
+              options: {
+                suite: ['register']
+              },
+              configFile: config
             }
             // test-mobile: {
             //     configFile: './test/config/suite.appium.conf.js'

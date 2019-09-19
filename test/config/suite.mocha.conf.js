@@ -26,6 +26,9 @@ exports.config = {
     suites: {
         login: [
             './test/specs/user-login.spec.js'
+        ],
+        register: [
+            './test/specs/create-profile.spec.js'
         ]
         //otherFeature: [
             // ...

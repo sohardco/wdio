@@ -17,8 +17,8 @@ import { expect } from 'chai';
 });*/
 
 describe('mmm-graphicswizard-gl-web-qa login popup', function() {
-  before ('Access login page',() => {
-      LoginPage.open();
+  before('Access login page',() => {
+      LoginPage.open('');
       LoginPage.waitForloginPageToLoad();
       LoginPage.landingLoginBtn.click();
   });
