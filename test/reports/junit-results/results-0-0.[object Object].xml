@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="mmm_graphicswizard_gl_web_qa_signup" timestamp="2019-09-19T17:28:46" time="8.578" tests="1" failures="0" errors="0" skipped="0">
+  <testsuite name="mmm_graphicswizard_gl_web_qa_signup" timestamp="2019-09-25T17:47:10" time="20.551" tests="6" failures="0" errors="0" skipped="0">
     <properties>
       <property name="specId" value="0"/>
       <property name="suiteName" value="mmm-graphicswizard-gl-web-qa signup"/>
-      <property name="capabilities" value="chrome.77_0_3865_75.windowsnt"/>
+      <property name="capabilities" value="chrome.77_0_3865_90.windowsnt"/>
       <property name="file" value=".\test\specs\create-profile.spec.js"/>
     </properties>
-    <testcase classname="chrome.77_0_3865_75.windowsnt.mmm_graphicswizard_gl_web_qa_signup" name="should_open_reg_page" time="1.026"/>
+    <testcase classname="chrome.77_0_3865_90.windowsnt.mmm_graphicswizard_gl_web_qa_signup" name="should_open_reg_page" time="1.016"/>
+    <testcase classname="chrome.77_0_3865_90.windowsnt.mmm_graphicswizard_gl_web_qa_signup" name="should_choose_Installer" time="0.103"/>
+    <testcase classname="chrome.77_0_3865_90.windowsnt.mmm_graphicswizard_gl_web_qa_signup" name="should_input_Personal_Data" time="0.719"/>
+    <testcase classname="chrome.77_0_3865_90.windowsnt.mmm_graphicswizard_gl_web_qa_signup" name="should_accept_TNC_and_opt_in" time="0.425"/>
+    <testcase classname="chrome.77_0_3865_90.windowsnt.mmm_graphicswizard_gl_web_qa_signup" name="should_submit_form" time="0.159"/>
+    <testcase classname="chrome.77_0_3865_90.windowsnt.mmm_graphicswizard_gl_web_qa_signup" name="should_accept_verification_code" time="10.112"/>
   </testsuite>
 </testsuites>

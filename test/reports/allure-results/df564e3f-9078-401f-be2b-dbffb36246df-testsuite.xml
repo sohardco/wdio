@@ -1,0 +1,99 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1569323323541' stop='1569323348307'>
+    <name>mmm-graphicswizard-gl-web-qa signup</name>
+    <title>mmm-graphicswizard-gl-web-qa signup</title>
+    <test-cases>
+        <test-case start='1569323335211' status='passed' stop='1569323336410'>
+            <name>should open reg page</name>
+            <title>should open reg page</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1569323336411' status='passed' stop='1569323336534'>
+            <name>should choose Installer</name>
+            <title>should choose Installer</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1569323336535' status='passed' stop='1569323337440'>
+            <name>should input Personal Data</name>
+            <title>should input Personal Data</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1569323337441' status='passed' stop='1569323337948'>
+            <name>should accept TNC and opt in</name>
+            <title>should accept TNC and opt in</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1569323337949' status='passed' stop='1569323338261'>
+            <name>should submit form</name>
+            <title>should submit form</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1569323338261' status='broken' stop='1569323348305'>
+            <name>should accept verification code</name>
+            <title>should accept verification code</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Cannot read property 'setValue' of undefined</message>
+                <stack-trace>TypeError: Cannot read property 'setValue' of undefined
+                    at CreateYourProfile.setValidationCode (D:/wdio/test/pageobjects/create-your-profile.page.js:92:21)
+                    at Context.it (D:/wdio/test/specs/create-profile.spec.js:44:23)
+                    at Context.executeSync (D:\wdio\node_modules\@wdio\sync\build\index.js:57:18)
+                    at D:\wdio\node_modules\@wdio\sync\build\index.js:143:70</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

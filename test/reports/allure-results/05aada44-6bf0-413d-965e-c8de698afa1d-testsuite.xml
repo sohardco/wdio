@@ -1,0 +1,86 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1569243849912' stop='1569243859139'>
+    <name>mmm-graphicswizard-gl-web-qa signup</name>
+    <title>mmm-graphicswizard-gl-web-qa signup</title>
+    <test-cases>
+        <test-case start='1569243856616' status='passed' stop='1569243857752'>
+            <name>should open reg page</name>
+            <title>should open reg page</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1569243857752' status='passed' stop='1569243857883'>
+            <name>should choose Installer</name>
+            <title>should choose Installer</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1569243857883' status='passed' stop='1569243858671'>
+            <name>should input Personal Data</name>
+            <title>should input Personal Data</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1569243858672' status='passed' stop='1569243859128'>
+            <name>should accept TNC and opt in</name>
+            <title>should accept TNC and opt in</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1569243859128' status='broken' stop='1569243859138'>
+            <name>should submit form</name>
+            <title>should submit form</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>this.submit.click is not a function</message>
+                <stack-trace>TypeError: this.submit.click is not a function
+                    at CreateYourProfile.submit (D:/wdio/test/pageobjects/create-your-profile.page.js:88:19)
+                    at Context.it (D:/wdio/test/specs/create-profile.spec.js:34:23)
+                    at Promise (D:\wdio\node_modules\@wdio\sync\build\index.js:57:22)
+                    at Context.executeSync (D:\wdio\node_modules\@wdio\sync\build\index.js:55:10)
+                    at D:\wdio\node_modules\@wdio\sync\build\index.js:201:70</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

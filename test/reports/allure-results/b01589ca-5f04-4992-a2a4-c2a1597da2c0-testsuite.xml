@@ -1,0 +1,101 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1569333603618' stop='1569333620554'>
+    <name>mmm-graphicswizard-gl-web-qa signup</name>
+    <title>mmm-graphicswizard-gl-web-qa signup</title>
+    <test-cases>
+        <test-case start='1569333615611' status='passed' stop='1569333617882'>
+            <name>should open reg page</name>
+            <title>should open reg page</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1569333617882' status='passed' stop='1569333618007'>
+            <name>should choose Installer</name>
+            <title>should choose Installer</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1569333618007' status='passed' stop='1569333618742'>
+            <name>should input Personal Data</name>
+            <title>should input Personal Data</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1569333618743' status='passed' stop='1569333619172'>
+            <name>should accept TNC and opt in</name>
+            <title>should accept TNC and opt in</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1569333619172' status='passed' stop='1569333619488'>
+            <name>should submit form</name>
+            <title>should submit form</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1569333619488' status='broken' stop='1569333620552'>
+            <name>should accept verification code</name>
+            <title>should accept verification code</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Cannot read property 'msgs' of undefined</message>
+                <stack-trace>TypeError: Cannot read property 'msgs' of undefined
+                    at fetchMail (D:/wdio/utilities/mail-utilities.js:46:28)
+                    at Browser.runCommandWithHooks (D:\wdio\node_modules\@wdio\sync\build\wrapCommand.js:56:22)
+                    at Browser.wrapCommandFn (D:\wdio\node_modules\@wdio\sync\build\wrapCommand.js:33:40)
+                    at Context.it (D:/wdio/test/specs/create-profile.spec.js:41:30)
+                    at Context.executeSync (D:\wdio\node_modules\@wdio\sync\build\index.js:57:18)
+                    at D:\wdio\node_modules\@wdio\sync\build\index.js:143:70</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
