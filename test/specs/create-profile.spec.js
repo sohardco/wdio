@@ -2,6 +2,7 @@ import LandingPage from '../pageobjects/landing.page';
 import CreateYourProfile from '../pageobjects/create-your-profile.page';
 import { randomString, randomPhoneNumber, createRandomUrl, parseMailCode, fetchMail } from '../../utilities/mail-utilities';
 import { expect } from 'chai';
+const axios = require('axios');
 
 describe('mmm-graphicswizard-gl-web-qa signup', function() {
   before('Access login page, create mail data',() => {
@@ -42,15 +43,18 @@ describe('mmm-graphicswizard-gl-web-qa signup', function() {
     const mailUrl = email[1]
     const output = browser.call(() => {
 
-    const fetchRes = fetchMail(mailUrl, parseMailCode)
-    
-    return fetchRes
+    //fetchMail(mailUrl, parseMailCode).then(res => console.log('Returned res: ',res))
+    return fetchMail(mailUrl, parseMailCode)//.then(res => console.log("Returned promise: ", res))
+      //console.log("mailres: ",typeof(mailres), mailres)
+    //.then(res => console.log('This is res: ',res))
+
+    //console.log("This is fetchres: ",response)
   })
-
-    //email[1], parseMailCode
-
+    console.log('This is output: ',output)
     browser.pause(10000)
     CreateYourProfile.setValidationCode(output)
-    //browser.pause(5000)
+
+    browser.pause(5000)
+    CreateYourProfile.submitForm()
   })
 });

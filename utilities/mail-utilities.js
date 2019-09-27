@@ -20,7 +20,6 @@ async function wait(ms) {
   });
 };
 
-let counter = 0;
 
 function createRandomUrl(length, randomString){
   //let mailId = crypto.randomBytes(3).toString('hex');
@@ -36,14 +35,12 @@ function parseMailCode(mailcodeString){
     return parsedMailCode
 }
 
+let counter = 0;
 
-async function fetchMail(mailUrl, parseMailCode){
+/*async function fetchMail(mailUrl, parseMailCode){
+
       console.log('This is Url ' + mailUrl)
       const response = await axios(mailUrl);
-      //console.log('This is response  ' + response)
-      //console.log(response.data)
-      //const data = await response.data;
-      //console.log('This is data ' + data)
       let data = response.data
       console.log(data)
       let mailCount = response.data.msgs.length;
@@ -53,16 +50,48 @@ async function fetchMail(mailUrl, parseMailCode){
             console.log(`No message received. Retry`)
             await wait(10000);
             await fetchMail(mailUrl, parseMailCode);
-            return
+            //return data
         }
 
-      const mailcodeString = await data.msgs[0].s;
+      const mailcodeString = data.msgs[0].s;
 
       console.log('This is mailCodeString ' + mailcodeString)
       console.log('This is parsed string:  '+ parseMailCode(mailcodeString))
-      return  parseMailCode(mailcodeString)
-      //return parsedMailCode
-}
+      let parsedMail = parseMailCode(mailcodeString)
+
+      let newData = Promise.resolve(parsedMail)
+
+      return  Promise.resolve(newData)
+
+
+}*/
+
+async function fetchMail(mailUrl, parseMailCode){
+    console.log(`mailUrl: ${mailUrl}`);
+
+    let counter = 0;
+    const { data } = await axios(mailUrl);
+    console.log(`data: ${data}`);
+
+    const { msgs } = data;
+    const mailCount = msgs.length;
+    console.log(`mailCount: ${mailCount}`);
+
+    if (mailCount === 0 && counter < 5) {
+        counter++;
+        console.log(`No message received. Retry`)
+        await wait(10000);
+        return await fetchMail(mailUrl, parseMailCode);
+    }
+
+    const mailcodeString = msgs[0].s;
+    console.log(`mailcodeString: ${mailcodeString}`);
+
+    const parsedMailcodeString = parseMailCode(mailcodeString);
+    console.log(`parsedMailcodeString: ${parsedMailcodeString}`);
+
+    return parsedMailcodeString;
+  }
 
 /*function fetchEmail(mailUrl, parseMailCode) {
   //console.log("Here is mailstring:   " + mailUrl)

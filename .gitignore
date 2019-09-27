@@ -1,4 +1,7 @@
 .idea
 .DS_Store
+Thumbs.db
+*.log*
+test/reports/*
 node_modules/
 npm-debug.log
