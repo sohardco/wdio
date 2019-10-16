@@ -30,41 +30,20 @@ function createRandomUrl(length, randomString){
 
 function parseMailCode(mailcodeString){
     let numberPattern = /\d+/g;
-    let parsedMailCode = parseInt(mailcodeString.match(numberPattern).join([]));
+    let parsedMailCode = mailcodeString.match(numberPattern).join([]);
+    //let parsedMailCode = parseInt(mailcodeString.match(numberPattern).join([]));
     console.log(parsedMailCode);
     return parsedMailCode
 }
 
-let counter = 0;
-
-/*async function fetchMail(mailUrl, parseMailCode){
-
-      console.log('This is Url ' + mailUrl)
-      const response = await axios(mailUrl);
-      let data = response.data
-      console.log(data)
-      let mailCount = response.data.msgs.length;
-      console.log('this is mailcount: ' + mailCount)
-        if (mailCount === 0 && counter < 5) {
-            counter++
-            console.log(`No message received. Retry`)
-            await wait(10000);
-            await fetchMail(mailUrl, parseMailCode);
-            //return data
+/*function concatenate(a, b, base) {
+        if(typeof base == 'undefined') {
+            base = 10;
         }
-
-      const mailcodeString = data.msgs[0].s;
-
-      console.log('This is mailCodeString ' + mailcodeString)
-      console.log('This is parsed string:  '+ parseMailCode(mailcodeString))
-      let parsedMail = parseMailCode(mailcodeString)
-
-      let newData = Promise.resolve(parsedMail)
-
-      return  Promise.resolve(newData)
-
-
-}*/
+        return a * Math.pow(base, Math.floor(Math.log(b) / Math.log(base)) + 1) + b;
+    }
+*/
+let counter = 0;
 
 async function fetchMail(mailUrl, parseMailCode){
     console.log(`mailUrl: ${mailUrl}`);
@@ -80,7 +59,7 @@ async function fetchMail(mailUrl, parseMailCode){
     if (mailCount === 0 && counter < 5) {
         counter++;
         console.log(`No message received. Retry`)
-        await wait(10000);
+        await wait(70000);
         return await fetchMail(mailUrl, parseMailCode);
     }
 
@@ -93,39 +72,4 @@ async function fetchMail(mailUrl, parseMailCode){
     return parsedMailcodeString;
   }
 
-/*function fetchEmail(mailUrl, parseMailCode) {
-  //console.log("Here is mailstring:   " + mailUrl)
-   return axios(mailUrl)
-   .then(res => {
-     return res.data })
-   .then(data => {
-    let mailCount = data.msgs.length
-    if (mailCount === 0 && counter < 5) {
-        counter++
-        console.log('No message received. Retry')
-        //wait(5000);
-        console.log('wait stopped')
-        fetchEMail(mailUrl, parseMailCode);
-        return
-    }
-
-    let mailcodeString = data.msgs[0].s;
-    console.log(mailсodeString)
-
-    return  parseMailCode(mailcodeString)
-   })
-   /*.then(res3 => {
-     console.log(res3)
-   })
-  // .then(res2 => {
-     //console.log(res2)
-     //return res2.msgs.[0]s;
-   }*/
-
-
-
 export { randomString, randomPhoneNumber, createRandomUrl, parseMailCode, fetchMail, mailHost }
-//async function verifyMail(mailId) {
-    //let data = await fetchMail(mailId);
-    //let responceCode = await checkMessages(data, fetchMail, mailId)
-//}

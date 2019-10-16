@@ -1,30 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="mmm_graphicswizard_gl_web_qa_login_popup" timestamp="2019-09-19T16:29:31" time="32.994" tests="6" failures="0" errors="1" skipped="0">
+  <testsuite name="installer_signup" timestamp="2019-10-10T17:19:22" time="30.139" tests="4" failures="0" errors="4" skipped="0">
     <properties>
       <property name="specId" value="0"/>
-      <property name="suiteName" value="mmm-graphicswizard-gl-web-qa login popup"/>
-      <property name="capabilities" value="chrome.77_0_3865_75.windowsnt"/>
-      <property name="file" value=".\test\specs\user-login.spec.js"/>
+      <property name="suiteName" value="installer signup"/>
+      <property name="capabilities" value="chrome.77_0_3865_90.windowsnt"/>
+      <property name="file" value=".\test\specs\company-information.spec.js"/>
     </properties>
-    <testcase classname="chrome.77_0_3865_75.windowsnt.mmm_graphicswizard_gl_web_qa_login_popup" name="should_not_allow_to_login_without_email" time="1.616"/>
-    <testcase classname="chrome.77_0_3865_75.windowsnt.mmm_graphicswizard_gl_web_qa_login_popup" name="should_not_allow_to_login_without_password" time="1.54"/>
-    <testcase classname="chrome.77_0_3865_75.windowsnt.mmm_graphicswizard_gl_web_qa_login_popup" name="should_not_allow_to_login_with_invalid_credentials" time="1.57"/>
-    <testcase classname="chrome.77_0_3865_75.windowsnt.mmm_graphicswizard_gl_web_qa_login_popup" name="should_not_allow_to_reset_email_which_is_not_exist" time="1.692"/>
-    <testcase classname="chrome.77_0_3865_75.windowsnt.mmm_graphicswizard_gl_web_qa_login_popup" name="should_not_allow_to_pass_incorrect_email_format" time="1.35"/>
-    <testcase classname="chrome.77_0_3865_75.windowsnt.mmm_graphicswizard_gl_web_qa_login_popup" name="should_allow_user_to_login_with_valid_credentials" time="10.406">
-      <error message="waitUntil condition timed out after 10000ms"/>
+    <testcase classname="chrome.77_0_3865_90.windowsnt.installer_signup" name="should_set_location" time="10.057">
+      <error message="Can't call setValue on element with selector &quot;[formcontrolname='address']&quot; because element wasn't found"/>
       <system-err>
         <![CDATA[
-Error: waitUntil condition timed out after 10000ms
-    at timer.catch.e (D:\wdio\node_modules\webdriverio\build\commands\browser\waitUntil.js:73:13)
-    at Browser.runCommand (D:\wdio\node_modules\@wdio\sync\build\wrapCommand.js:31:24)
-    at Browser.<anonymous> (D:\wdio\node_modules\@wdio\sync\build\wrapCommand.js:53:31)
-    at LoginPage.isLoggedIn (D:/wdio/test/pageobjects/login.page.js:75:17)
-    at Context.it (D:/wdio/test/specs/user-login.spec.js:63:17)
-    at Promise (D:\wdio\node_modules\@wdio\sync\build\index.js:57:22)
-    at Context.executeSync (D:\wdio\node_modules\@wdio\sync\build\index.js:55:10)
-    at D:\wdio\node_modules\@wdio\sync\build\index.js:201:70
+Error: Can't call setValue on element with selector "[formcontrolname='address']" because element wasn't found
+    at implicitWait (D:\wdio\node_modules\webdriverio\build\utils\implicitWait.js:22:13)
+    at Element.runCommandWithHooks (D:\wdio\node_modules\@wdio\sync\build\wrapCommand.js:56:22)
+    at Element.wrapCommandFn (D:\wdio\node_modules\@wdio\sync\build\wrapCommand.js:33:40)
+    at Element.elementErrorHandlerCallback (D:\wdio\node_modules\webdriverio\build\middlewares.js:40:8)
+    at CompanyInformation.setLocation (D:/wdio/test/pageobjects/company-information.page.js:82:26)
+    at Context.it (D:/wdio/test/specs/company-information.spec.js:5:24)
+    at Context.executeSync (D:\wdio\node_modules\@wdio\sync\build\index.js:57:18)
+    at D:\wdio\node_modules\@wdio\sync\build\index.js:143:70
+]]>
+      </system-err>
+    </testcase>
+    <testcase classname="chrome.77_0_3865_90.windowsnt.installer_signup" name="should_set_general_info" time="10.023">
+      <error message="Can't call setValue on element with selector &quot;[formcontrolname=&quot;name&quot;]&quot; because element wasn't found"/>
+      <system-err>
+        <![CDATA[
+Error: Can't call setValue on element with selector "[formcontrolname="name"]" because element wasn't found
+    at implicitWait (D:\wdio\node_modules\webdriverio\build\utils\implicitWait.js:22:13)
+    at Element.runCommandWithHooks (D:\wdio\node_modules\@wdio\sync\build\wrapCommand.js:56:22)
+    at Element.wrapCommandFn (D:\wdio\node_modules\@wdio\sync\build\wrapCommand.js:33:40)
+    at Element.elementErrorHandlerCallback (D:\wdio\node_modules\webdriverio\build\middlewares.js:40:8)
+    at CompanyInformation.setGeneralInfo (D:/wdio/test/pageobjects/company-information.page.js:90:24)
+    at Context.it (D:/wdio/test/specs/company-information.spec.js:9:24)
+    at Context.executeSync (D:\wdio\node_modules\@wdio\sync\build\index.js:57:18)
+    at D:\wdio\node_modules\@wdio\sync\build\index.js:143:70
+]]>
+      </system-err>
+    </testcase>
+    <testcase classname="chrome.77_0_3865_90.windowsnt.installer_signup" name="should_choose_competency" time="10.053">
+      <error message="Can't call click on element with selector &quot;.competency-tile-container:first-child&quot; because element wasn't found"/>
+      <system-err>
+        <![CDATA[
+Error: Can't call click on element with selector ".competency-tile-container:first-child" because element wasn't found
+    at implicitWait (D:\wdio\node_modules\webdriverio\build\utils\implicitWait.js:22:13)
+    at Element.runCommandWithHooks (D:\wdio\node_modules\@wdio\sync\build\wrapCommand.js:56:22)
+    at Element.wrapCommandFn (D:\wdio\node_modules\@wdio\sync\build\wrapCommand.js:33:40)
+    at Element.elementErrorHandlerCallback (D:\wdio\node_modules\webdriverio\build\middlewares.js:40:8)
+    at CompanyInformation.chooseCompetency (D:/wdio/test/pageobjects/company-information.page.js:97:26)
+    at Context.it (D:/wdio/test/specs/company-information.spec.js:13:24)
+    at Context.executeSync (D:\wdio\node_modules\@wdio\sync\build\index.js:57:18)
+    at D:\wdio\node_modules\@wdio\sync\build\index.js:143:70
+]]>
+      </system-err>
+    </testcase>
+    <testcase classname="chrome.77_0_3865_90.windowsnt.installer_signup" name="should_submit_form" time="0.001">
+      <error message="this.submit.click is not a function"/>
+      <system-err>
+        <![CDATA[
+TypeError: this.submit.click is not a function
+    at CompanyInformation.submit (D:/wdio/test/pageobjects/company-information.page.js:101:19)
+    at Context.it (D:/wdio/test/specs/company-information.spec.js:17:24)
+    at Context.executeSync (D:\wdio\node_modules\@wdio\sync\build\index.js:57:18)
+    at D:\wdio\node_modules\@wdio\sync\build\index.js:143:70
 ]]>
       </system-err>
     </testcase>

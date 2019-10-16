@@ -42,19 +42,14 @@ describe('mmm-graphicswizard-gl-web-qa signup', function() {
 
     const mailUrl = email[1]
     const output = browser.call(() => {
-
-    //fetchMail(mailUrl, parseMailCode).then(res => console.log('Returned res: ',res))
-    return fetchMail(mailUrl, parseMailCode)//.then(res => console.log("Returned promise: ", res))
-      //console.log("mailres: ",typeof(mailres), mailres)
-    //.then(res => console.log('This is res: ',res))
-
-    //console.log("This is fetchres: ",response)
-  })
+      return fetchMail(mailUrl, parseMailCode)
+    })
     console.log('This is output: ',output)
-    browser.pause(10000)
+
     CreateYourProfile.setValidationCode(output)
 
     browser.pause(5000)
     CreateYourProfile.submitForm()
+    browser.pause(10000)
   })
 });
