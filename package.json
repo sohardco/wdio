@@ -43,7 +43,7 @@
     "junit-viewer": "^4.11.1",
     "lodash": "^4.17.15",
     "node-excel-to-json": "0.0.3",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^2.6.7",
     "node-gyp": "^5.0.3",
     "underscore": "^1.8.3",
     "webdriverio": "^5.13.1"
